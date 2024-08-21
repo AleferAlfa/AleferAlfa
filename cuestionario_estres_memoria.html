@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario: Impacto del Estrés en la Memoria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cuestionario: Impacto del Estrés en la Memoria</h1>
+    <p>Por favor, responde las siguientes preguntas de manera honesta. Todas las respuestas son confidenciales.</p>
+
+    <form action="https://example.com/submit" method="post">
+        <!-- Sección 1: Información Demográfica -->
+        <div class="question">
+            <label for="edad">1.1. ¿Cuál es tu edad?</label>
+            <select id="edad" name="edad">
+                <option value="menos18">Menos de 18 años</option>
+                <option value="18-24">18-24 años</option>
+                <option value="25-34">25-34 años</option>
+                <option value="35-44">35-44 años</option>
+                <option value="45-54">45-54 años</option>
+                <option value="55-mas">55 años o más</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="genero">1.2. ¿Cuál es tu género?</label>
+            <select id="genero" name="genero">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="prefiero-no-decirlo">Prefiero no decirlo</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="ocupacion">1.3. ¿Cuál es tu ocupación?</label>
+            <select id="ocupacion" name="ocupacion">
+                <option value="estudiante">Estudiante</option>
+                <option value="profesional">Profesional</option>
+                <option value="desempleado">Desempleado</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="nivel_estudios">1.4. Si eres estudiante, ¿en qué nivel de estudios te encuentras?</label>
+            <select id="nivel_estudios" name="nivel_estudios">
+                <option value="secundaria">Secundaria</option>
+                <option value="pregrado">Universidad (Pregrado)</option>
+                <option value="posgrado">Universidad (Posgrado)</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+
+        <!-- Sección 2: Estrés Percibido -->
+        <div class="question">
+            <label>2.1. En una escala del 1 al 5, ¿cómo describirías tu nivel general de estrés en el último mes?</label>
+            <select name="nivel_estres">
+                <option value="1">1 (Muy bajo)</option>
+                <option value="2">2 (Bajo)</option>
+                <option value="3">3 (Moderado)</option>
+                <option value="4">4 (Alto)</option>
+                <option value="5">5 (Muy alto)</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>2.2. ¿Qué factores contribuyen más a tu estrés? (Marca todas las que apliquen)</label>
+            <input type="checkbox" name="factores_estres[]" value="estudios"> Estudios<br>
+            <input type="checkbox" name="factores_estres[]" value="trabajo"> Trabajo<br>
+            <input type="checkbox" name="factores_estres[]" value="relaciones"> Relaciones personales<br>
+            <input type="checkbox" name="factores_estres[]" value="financieros"> Problemas financieros<br>
+            <input type="checkbox" name="factores_estres[]" value="salud"> Salud<br>
+            <input type="checkbox" name="factores_estres[]" value="otros"> Otros
+        </div>
+
+        <div class="question">
+            <label>2.3. ¿Con qué frecuencia experimentas los siguientes síntomas debido al estrés?</label>
+            <label>Dolor de cabeza:</label>
+            <select name="dolor_cabeza">
+                <option value="nunca">Nunca</option>
+                <option value="raramente">Raramente</option>
+                <option value="aveces">A veces</option>
+                <option value="frecuentemente">Frecuentemente</option>
+                <option value="siempre">Siempre</option>
+            </select><br><br>
+
+            <label>Insomnio:</label>
+            <select name="insomnio">
+                <option value="nunca">Nunca</option>
+                <option value="raramente">Raramente</option>
+                <option value="aveces">A veces</option>
+                <option value="frecuentemente">Frecuentemente</option>
+                <option value="siempre">Siempre</option>
+            </select><br><br>
+
+            <label>Fatiga:</label>
+            <select name="fatiga">
+                <option value="nunca">Nunca</option>
+                <option value="raramente">Raramente</option>
+                <option value="aveces">A veces</option>
+                <option value="frecuentemente">Frecuentemente</option>
+                <option value="siempre">Siempre</option>
+            </select><br><br>
+
+            <label>Dificultad para concentrarse:</label>
+            <select name="dificultad_concentrarse">
+                <option value="nunca">Nunca</option>
+                <option value="raramente">Raramente</option>
+                <option value="aveces">A veces</option>
+                <option value="frecuentemente">Frecuentemente</option>
+                <option value="siempre">Siempre</option>
+            </select><br><br>
+        </div>
+
+        <!-- Sección 3: Impacto en la Memoria -->
+        <div class="question">
+            <label>3.1. ¿Con qué frecuencia olvidas información importante cuando estás estresado/a?</label>
+            <select name="olvido_informacion">
+                <option value="nunca">Nunca</option>
+                <option value="raramente">Raramente</option>
+                <option value="aveces">A veces</option>
+                <option value="frecuentemente">Frecuentemente</option>
+                <option value="siempre">Siempre</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>3.2. ¿Cómo describirías el impacto del estrés en tu capacidad para recordar información importante?</label>
+            <select name="impacto_memoria">
+                <option value="no_afecta">No afecta en absoluto</option>
+                <option value="afecta_ligeramente">Afecta ligeramente</option>
+                <option value="afecta_moderadamente">Afecta moderadamente</option>
+                <option value="afecta_significativamente">Afecta significativamente</option>
+                <option value="afecta_severamente">Afecta severamente</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>3.3. ¿Con qué frecuencia tienes dificultades para recordar lo que has estudiado o aprendido cuando estás bajo presión?</label>
+            <select name="dificultad_recordar">
+                <option value="nunca">Nunca</option>
+                <option value="raramente">Raramente</option>
+                <option value="aveces">A veces</option>
+                <option value="frecuentemente">Frecuentemente</option>
+                <option value="siempre">Siempre</option>
